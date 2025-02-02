@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Placement Status</title>
+  <script>
+    function displayPlacementStatus() {
+      const cgpa = parseFloat(document.getElementById("cgpa").value);
+      let status = "";
+
+      if (cgpa >= 7.2 && cgpa <= 7.5) {
+        document.body.style.backgroundColor = "red";
+        status = "Not allowed to placement drive.";
+      } else if (cgpa > 7.5 && cgpa <= 8.5) {
+        document.body.style.backgroundColor = "orange";
+        status = "Maybe placed.";
+      } else {
+        status = "Eligible for placement.";
+      }
+
+      document.getElementById("status").innerText = status;
+    }
+  </script>
+</head>
+<body>
+  <h2>Enter your CGPA to check Placement Status:</h2>
+  <input type="number" id="cgpa" step="0.1" min="0" max="10">
+  <button onclick="displayPlacementStatus()">Check Status</button>
+
+  <h3 id="status"></h3>
+</body>
+</html>

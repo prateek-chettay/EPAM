@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Payslip Form</title>
+  <script>
+    function calculatePayslip() {
+      const basicSalary = 37900;
+      const workingDays = 30;
+      const presentDays = parseInt(document.getElementById("presentDays").value);
+      
+      if (isNaN(presentDays) || presentDays < 0 || presentDays > workingDays) {
+        alert("Invalid number of present days");
+        return;
+      }
+
+      const dns = 0.09 * basicSalary;
+      const hra = 0.3 * basicSalary; // Hostel
+      const roomAllowance = 0.2 * basicSalary; // Room
+
+      const totalSalary = basicSalary + hra + roomAllowance - dns;
+      document.getElementById("totalSalary").innerText = `Total Salary: ${totalSalary.toFixed(2)}`;
+    }
+  </script>
+</head>
+<body>
+  <h2>Employee Payslip Form</h2>
+  <form onsubmit="event.preventDefault(); calculatePayslip();">
+    <label for="presentDays">Number of Days Present:</label>
+    <input type="number" id="presentDays" min="0" max="30"><br><br>
+    <input type="submit" value="Calculate Payslip">
+  </form>
+
+  <h3 id="totalSalary"></h3>
+</body>
+</html>

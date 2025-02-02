@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Tables Example</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Table 1: Basic Table</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Country</th>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>25</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Alice</td>
+      <td>30</td>
+      <td>Canada</td>
+    </tr>
+  </table>
+
+  <h2>Table 2: Table with Header Row Spanning</h2>
+  <table>
+    <tr>
+      <th colspan="3">Employee Information</th>
+    </tr>
+    <tr>
+      <th>Employee ID</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+    <tr>
+      <td>E101</td>
+      <td>Bob</td>
+      <td>$5000</td>
+    </tr>
+    <tr>
+      <td>E102</td>
+      <td>Emma</td>
+      <td>$6000</td>
+    </tr>
+  </table>
+
+  <h2>Table 3: Table with Rowspan</h2>
+  <table>
+    <tr>
+      <th rowspan="2">ID</th>
+      <th>Name</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Alice</td>
+      <td>30</td>
+    </tr>
+  </table>
+
+  <h2>Table 4: Table with Caption</h2>
+  <table>
+    <caption>Product List</caption>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+    </tr>
+    <tr>
+      <td>Shampoo</td>
+      <td>$5</td>
+    </tr>
+    <tr>
+      <td>Soap</td>
+      <td>$3</td>
+    </tr>
+  </table>
+
+  <h2>Table 5: Table with Color and Border</h2>
+  <table style="background-color: lightgray;">
+    <tr>
+      <th>Course</th>
+      <th>Duration</th>
+    </tr>
+    <tr>
+      <td>HTML</td>
+      <td>3 months</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>3 months</td>
+    </tr>
+  </table>
+</body>
+</html>
